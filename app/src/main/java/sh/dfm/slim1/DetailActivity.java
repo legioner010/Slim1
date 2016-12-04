@@ -8,9 +8,17 @@ import android.support.v7.app.AppCompatActivity;
  * Created by е on 03.12.2016.
  */
 public class DetailActivity extends AppCompatActivity {
+    public static final String EXTRA_WORKOUT_ID = "id";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_detail);
+        WorkoutDetailFragment workoutDetailFragment =(WorkoutDetailFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.detail_frag);
+
+        int workoutId= (int) getIntent().getIntExtra(EXTRA_WORKOUT_ID, 0);
+        workoutDetailFragment.setWorkout(workoutId);
     }
 }

@@ -14,5 +14,13 @@
             android:layout_height="match_parent"
             class="sh.dfm.slim1.WorkoutListFragment"/>
 
+    <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            class="sh.dfm.slim1.WorkoutDetailFragment"/>
+
 
 </LinearLayout>

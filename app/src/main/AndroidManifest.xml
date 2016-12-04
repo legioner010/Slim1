@@ -20,8 +20,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="sh.dfm.slim1.DetailActivity"
-                  android:configChanges="orientation|screenSize"/>
+        <!--<activity android:name="sh.dfm.slim1.DetailActivity"-->
+                  <!--android:configChanges="orientation|screenSize"/>-->
 
     </application>
 

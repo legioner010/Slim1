@@ -12,17 +12,17 @@ import android.widget.ListView;
 
 public class WorkoutListFragment  extends ListFragment{
 
-//    private WorkoutListListner mainAcrivityReference;
+    private WorkoutListListner listner;
 
-//    public static interface WorkoutListListner {
-//        void itemClicked(long id);
-//    }
-//
-//    @Override
-//    public void onAttach(Activity activity) {
-//        super.onAttach(activity);
-//        this.mainAcrivityReference =(WorkoutListListner) activity;
-//    }
+    public static interface WorkoutListListner {
+        void itemClicked(long id);
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        this.listner =(WorkoutListListner) activity;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -39,9 +39,9 @@ public class WorkoutListFragment  extends ListFragment{
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 
-//    @Override
-//    public void onListItemClick(ListView l, View v, int position, long id) {
-//        //super.onListItemClick(l, v, position, id);
-//        mainAcrivityReference.itemClicked(id);
-//    }
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        //super.onListItemClick(l, v, position, id);
+        listner.itemClicked(id);
+    }
 }
